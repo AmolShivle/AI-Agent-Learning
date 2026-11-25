@@ -1,0 +1,16 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# SQLite database files
+day10_memory.sqlite
+
+# Virtual environments
+.venv
+
+# Secrets
+.env
