@@ -6,9 +6,12 @@ dist/
 wheels/
 *.egg-info
 
+<<<<<<< HEAD
 # SQLite database files
 day10_memory.sqlite
 
+=======
+>>>>>>> d27384b53995b5004678d35b76c3c553229bef3f
 # Virtual environments
 .venv
 
