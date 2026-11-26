@@ -1,0 +1,70 @@
+
+DATA ENGINEERING KNOWLEDGE BASE
+
+1. INCREMENTAL DATA LOADING
+
+Incremental data loading processes only new or modified records
+instead of reloading the entire dataset.
+
+A common approach is to use a watermark column such as
+last_updated_timestamp.
+
+The ETL pipeline extracts records where the source timestamp
+is greater than the last successfully processed watermark.
+
+This approach reduces processing time and improves efficiency.
+
+2. MEDALLION ARCHITECTURE
+
+The Medallion Architecture consists of three layers:
+
+Bronze Layer:
+Stores raw data as received from source systems.
+
+Silver Layer:
+Stores cleaned, validated and transformed data.
+
+Gold Layer:
+Stores business-ready and aggregated datasets for reporting
+and analytics.
+
+3. DATABRICKS UNITY CATALOG
+
+Unity Catalog provides centralized governance for data
+and AI assets in Databricks.
+
+It manages access control, auditing, lineage and data discovery.
+
+Its three-level namespace is:
+catalog.schema.table
+
+4. DATA QUALITY
+
+Data quality checks validate the accuracy, completeness
+and consistency of data.
+
+Common checks include:
+- NOT NULL validation
+- Duplicate record detection
+- Primary key validation
+- Referential integrity
+- Data type validation
+- Business rule validation
+
+5. APACHE SPARK
+
+Apache Spark is a distributed data processing framework.
+
+It supports large-scale batch processing, streaming,
+SQL analytics and machine learning.
+
+Spark DataFrames provide a structured API for distributed
+data processing.
+
+6. ETL VS ELT
+
+ETL means Extract, Transform, Load.
+Data is transformed before loading into the target system.
+
+ELT means Extract, Load, Transform.
+Data is loaded first and transformed inside the target platform.
