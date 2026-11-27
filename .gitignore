@@ -6,15 +6,17 @@ dist/
 wheels/
 *.egg-info
 
-
-# SQLite database files
-*.sqlite
-*.sqlite3
-
-=======
-
 # Virtual environments
 .venv
 
 # Secrets
 .env
+
+
+# ChromaDB vector database
+chroma_db/
+
+
+# SQLite database files
+*.sqlite
+*.sqlite3

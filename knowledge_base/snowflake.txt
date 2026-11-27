@@ -1,0 +1,207 @@
+
+# Snowflake Architecture and Data Warehouse Concepts
+
+## 1. What is Snowflake?
+
+Snowflake is a cloud-based data platform used for data warehousing,
+data engineering, data analytics, and data sharing.
+
+It runs on cloud infrastructure such as AWS, Microsoft Azure,
+and Google Cloud Platform.
+
+Snowflake separates storage and compute resources, allowing
+independent scaling of both.
+
+## 2. Snowflake Architecture
+
+Snowflake architecture consists of three major layers:
+
+1. Database Storage Layer
+2. Query Processing Layer
+3. Cloud Services Layer
+
+### Database Storage Layer
+
+- Stores structured and semi-structured data.
+- Data is stored in compressed and columnar micro-partitions.
+- Snowflake manages storage automatically.
+- Supports formats such as JSON, Avro, Parquet, and XML.
+
+### Query Processing Layer
+
+- Uses virtual warehouses to execute SQL queries.
+- Each virtual warehouse provides independent compute resources.
+- Warehouses can be resized based on workload requirements.
+- Multiple warehouses can access the same data.
+
+### Cloud Services Layer
+
+- Manages authentication and access control.
+- Handles query optimization and compilation.
+- Manages metadata and transactions.
+- Coordinates infrastructure and query execution.
+
+## 3. Virtual Warehouses
+
+A virtual warehouse is a compute cluster used to execute queries
+and perform data loading operations.
+
+Warehouse sizes include:
+
+- X-Small
+- Small
+- Medium
+- Large
+- X-Large
+
+Key features:
+
+- Independent compute and storage.
+- Auto-suspend and auto-resume.
+- Multi-cluster warehouses.
+- Workload isolation.
+- Independent scaling.
+
+## 4. Snowflake Database Objects
+
+The hierarchy is:
+
+Database
+  -> Schema
+      -> Tables
+      -> Views
+      -> Stages
+      -> File Formats
+      -> Stored Procedures
+
+## 5. Micro-Partitions
+
+Snowflake automatically divides table data into micro-partitions.
+
+Features:
+
+- Columnar storage.
+- Metadata-based pruning.
+- Automatic partition management.
+- Efficient query execution.
+
+Micro-partition pruning reduces the amount of data scanned
+during query execution.
+
+## 6. Snowflake Data Loading
+
+Snowflake supports two major loading approaches.
+
+### COPY INTO
+
+- Loads data from internal or external stages.
+- Supports bulk loading.
+- Commonly used for batch ingestion.
+
+### Snowpipe
+
+- Supports continuous, automated data ingestion.
+- Uses event notifications for supported cloud storage integrations.
+- Useful for near-real-time ingestion.
+
+## 7. Snowflake Stages
+
+Stages are locations used to store files before loading data.
+
+Types:
+
+- Internal stages
+- External stages
+
+External stages can connect to cloud storage such as
+Azure Blob Storage, Amazon S3, and Google Cloud Storage.
+
+## 8. Snowflake Time Travel
+
+Time Travel allows users to access historical data
+within the configured retention period.
+
+Use cases:
+
+- Recover accidentally deleted data.
+- Query historical table versions.
+- Restore dropped tables.
+
+## 9. Zero-Copy Cloning
+
+Zero-copy cloning creates a clone of a database, schema,
+or table without immediately duplicating the underlying data.
+
+It is useful for:
+
+- Development environments.
+- Testing.
+- Data recovery.
+- Creating isolated datasets.
+
+## 10. Snowflake Streams and Tasks
+
+Streams track changes made to source tables.
+
+Tasks execute SQL statements on a schedule or through
+task dependencies.
+
+Together, streams and tasks support incremental
+data processing and automated ETL pipelines.
+
+## 11. Snowflake Performance Optimization
+
+Common optimization techniques:
+
+- Query Profile analysis.
+- Micro-partition pruning.
+- Appropriate warehouse sizing.
+- Query result caching.
+- Warehouse auto-suspend.
+- Clustering keys when appropriate.
+- Avoid unnecessary data scanning.
+
+## 12. Snowflake Security
+
+Snowflake uses role-based access control (RBAC).
+
+Important security features:
+
+- Roles and privileges.
+- Virtual private connectivity options.
+- Data masking policies.
+- Row access policies.
+- Encryption at rest and in transit.
+- Secure data sharing.
+
+## 13. Snowflake vs Traditional Data Warehouse
+
+Traditional data warehouses often couple storage and compute.
+
+Snowflake separates storage and compute, allowing
+independent scaling and workload isolation.
+
+## 14. Common Interview Questions
+
+Q1. What are the three layers of Snowflake architecture?
+
+Answer: Database Storage, Query Processing, and Cloud Services.
+
+Q2. What is a virtual warehouse?
+
+Answer: A virtual warehouse is a compute resource used
+to execute SQL queries and data loading operations.
+
+Q3. What is Snowpipe?
+
+Answer: Snowpipe provides automated continuous data ingestion.
+
+Q4. What is Time Travel?
+
+Answer: It allows access to historical data within the
+configured retention period.
+
+Q5. What is zero-copy cloning?
+
+Answer: It creates a clone without immediately copying
+the underlying data.

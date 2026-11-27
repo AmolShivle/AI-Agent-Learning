@@ -1,0 +1,37 @@
+UNITY CATALOG
+
+Unity Catalog is the centralized governance solution
+in Databricks.
+
+Features include:
+- Centralized access control
+- Data lineage
+- Data discovery
+- Audit logging
+- Data sharing
+
+Object hierarchy:
+Catalog -> Schema -> Table
+
+DELTA LAKE
+
+Delta Lake is an open-source storage framework
+that provides ACID transactions.
+
+Features:
+- Schema enforcement
+- Schema evolution
+- Time travel
+- MERGE operations
+- Change Data Feed
+- OPTIMIZE and VACUUM
+
+SPARK PERFORMANCE
+
+Spark performance can be improved using:
+- Broadcast joins
+- Partition pruning
+- Predicate pushdown
+- Appropriate partition sizing
+- Avoiding unnecessary shuffles
+- Delta table optimization

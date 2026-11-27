@@ -1,0 +1,37 @@
+AZURE DATA FACTORY
+
+Azure Data Factory is a cloud-based data integration
+and orchestration service.
+
+Important components:
+- Pipelines
+- Activities
+- Datasets
+- Linked Services
+- Integration Runtime
+- Triggers
+
+INCREMENTAL LOADING
+
+Watermark-based incremental loading processes only
+new or modified records.
+
+Typical workflow:
+1. Read the previous watermark.
+2. Extract new or modified records.
+3. Load data into the destination.
+4. Validate the loaded data.
+5. Update the watermark after successful completion.
+
+If the pipeline fails, do not advance the watermark
+before successful processing.
+
+PIPELINE MONITORING
+
+Important monitoring metrics:
+- Execution duration
+- Record counts
+- Failure rate
+- Data freshness
+- SLA compliance
+- Retry count
